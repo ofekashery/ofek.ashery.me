@@ -156,28 +156,30 @@ a:active,a:focus {
   transform: scale(1.05,1.05);
 }
 
-@media max-width 1024px {
+@media screen and (max-width: 1024px) {
   .projects img {
     height: 120px;
     width: 120px;
   }
 }
 
-@media max-width 768px {
+@media screen and (max-width: 768px) {
   .projects img {
     height: 110px;
-    margin: 15px;
     width: 110px;
+    margin: 15px;
   }
 }
 
-@media max-width 370px {
+/*
+@media screen and (max-width: 370px) {
   .projects img {
     height: 90px;
-    margin: 20px;
     width: 90px;
+    margin: 10px;
   }
 }
+*/
 
 
 
@@ -242,8 +244,11 @@ footer {
 
 
 /* Modals */
-@media max-width 576px {
+@media screen and (max-width: 768px) {
   .modal-body h2 {
     margin-top: 20px;
   }
+}
+.modal .modal-body {
+    overflow-y: auto;
 }
