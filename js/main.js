@@ -17,3 +17,5 @@ $(document).ready(function () {
         }
     });
 });
+
+$('.modal .modal-body').css('max-height', $(window).height()*0.965);
