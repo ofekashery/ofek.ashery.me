@@ -7,10 +7,9 @@ html, body {
 
 .project, .topic {
     height: 100%;
-    padding: 32px !important;
+    padding: 32px;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     text-decoration: none !important;
@@ -20,9 +19,15 @@ html, body {
     border: 1px #e1e4e8 solid;
     background-color: #fff;
     cursor: pointer;
+    transition: all 350ms ease;
+}
+
+.project {
+    padding: 20px !important;
 }
 
 .project:hover, .topic:hover {
+    box-shadow: 0 0 10px 0 rgba(127, 127, 127, 0.2);
     transform: scale(1.025);
     text-decoration: none !important;
 }
@@ -33,9 +38,17 @@ html, body {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 16px;
+    transition: all .15s ease;
+    position: relative;
+    top: 0;
 }
+
 .project img {
     border-radius: 8px !important;
+}
+
+.project:hover img, .topic:hover img {
+    transform: translateY(-3px);
 }
 
 .project p, .topic p {
@@ -57,4 +70,9 @@ html, body {
 .social img {
     height: 32px;
     width: 32px;
+    transition: all 350ms ease;
+}
+
+.social a:hover img {
+    transform: translateY(-6px);
 }
