@@ -5,6 +5,58 @@ html, body {
     font-family:'Rubik', sans-serif
 }
 
+.name {
+    line-height: 1.25;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.text-gray {
+    color: #586069;
+}
+
+.bg-gray-light {
+    background-color:#fafbfc
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+    color: #586069;
+}
+
+.gutter-condensed {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutter-condensed>[class*="col-"] {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+}
+
+@media (min-width: 768px) {
+    .section-border-top {
+        border-top: unset !important;
+    }
+
+    .section-border-right {
+        border-right: 1px #e1e4e8 solid;
+    }
+}
+
+.section-border-top {
+    border-top: 1px #e1e4e8 solid;
+}
+
 .project, .topic {
     height: 100%;
     padding: 32px;
