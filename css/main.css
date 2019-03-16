@@ -2,7 +2,7 @@
 
 html, body {
     height: 100%;
-    font-family:'Rubik', sans-serif
+    font-family: 'Rubik', sans-serif;
 }
 
 .name {
@@ -17,7 +17,7 @@ html, body {
 }
 
 .bg-gray-light {
-    background-color:#fafbfc
+    background-color: #fafbfc;
 }
 
 .title {
@@ -57,6 +57,10 @@ html, body {
     border-top: 1px #e1e4e8 solid;
 }
 
+.project {
+    padding: 20px !important;
+}
+
 .project, .topic {
     height: 100%;
     padding: 32px;
@@ -71,16 +75,12 @@ html, body {
     border: 1px #e1e4e8 solid;
     background-color: #fff;
     cursor: pointer;
-    transition: all 350ms ease;
-}
-
-.project {
-    padding: 20px !important;
+    transition: all 200ms ease-in-out;
 }
 
 .project:hover, .topic:hover {
     box-shadow: 0 0 10px 0 rgba(127, 127, 127, 0.2);
-    transform: scale(1.025);
+    transform: scale(1.05);
     text-decoration: none !important;
 }
 
@@ -90,17 +90,12 @@ html, body {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 16px;
-    transition: all .15s ease;
     position: relative;
     top: 0;
 }
 
 .project img {
     border-radius: 8px !important;
-}
-
-.project:hover img, .topic:hover img {
-    transform: translateY(-3px);
 }
 
 .project p, .topic p {
