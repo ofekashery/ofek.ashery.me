@@ -84,6 +84,13 @@ html, body {
     text-decoration: none !important;
 }
 
+.project img {
+    height: 56px!important;
+    width: 56px!important;
+    border-radius: 50%;
+    box-shadow: 0 1px 5px rgba(27,31,35,.15);
+}
+
 .project img, .topic img {
     height: 64px;
     width: 64px;
@@ -94,11 +101,19 @@ html, body {
     top: 0;
 }
 
-.project img {
-    border-radius: 8px !important;
+.project h1 {
+    font-size: 18px;
+    margin: 0!important;
 }
 
-.project p, .topic p {
+.project p {
+    line-height: 1.25;
+    margin-top: 4px;
+    margin-bottom: 0;
+    color: #586069;
+}
+
+.topic p {
     line-height: 1.25;
     font-size: 18px;
     margin-top: 4px;
@@ -122,4 +137,48 @@ html, body {
 
 .social a:hover img {
     transform: translateY(-6px);
+}
+
+.modal .logo {
+    height: 72px;
+    width: 72px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 5px rgba(27,31,35,.15);
+    display: flex;
+    justify-content: center;
+}
+
+.modal h1 {
+    line-height: 1.25;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.modal img.img-fluid {
+    max-height: 270px;
+}
+
+@media (min-width: 992px) {
+    .project-details {
+        border-right: #e1e4e8 solid 1px;
+    }
+}
+
+.project-category {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace!important;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #6a737d;
+}
+
+.category-title {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #6a737d;
+    font-size: 14px;
 }
