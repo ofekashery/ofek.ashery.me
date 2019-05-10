@@ -78,27 +78,33 @@ html, body {
     transition: all 200ms ease-in-out;
 }
 
+.topic {
+    padding: 15px;
+    flex-direction: row !important;
+    text-align: start !important;
+    justify-content: right !important;
+    align-items: center;
+}
+
 .project:hover, .topic:hover {
     box-shadow: 0 0 10px 0 rgba(127, 127, 127, 0.2);
     transform: scale(1.05);
     text-decoration: none !important;
 }
 
-.project img {
-    height: 56px!important;
-    width: 56px!important;
-    border-radius: 50%;
-    box-shadow: 0 1px 5px rgba(27,31,35,.15);
+.topic img {
+    height: 38px;
+    width: 38px;
 }
 
-.project img, .topic img {
-    height: 64px;
-    width: 64px;
+.project img {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 5px rgba(27,31,35,.15);
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 16px;
-    position: relative;
-    top: 0;
 }
 
 .project h1 {
@@ -114,11 +120,10 @@ html, body {
 }
 
 .topic p {
-    line-height: 1.25;
     font-size: 18px;
-    margin-top: 4px;
-    margin-bottom: 0;
+    margin: 0;
     color: #24292e;
+    padding: 0 15px;
 }
 
 .modal h2 {
