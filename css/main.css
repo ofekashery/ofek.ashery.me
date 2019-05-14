@@ -58,12 +58,11 @@ html, body {
 }
 
 .project {
-    padding: 20px !important;
+    padding: 20px;
 }
 
 .project, .topic {
     height: 100%;
-    padding: 32px;
     display: flex;
     flex-direction: column;
     -webkit-backface-visibility: hidden;
@@ -123,6 +122,13 @@ html, body {
     margin: 0;
     color: #24292e;
     padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .topic p {
+        font-size: 16px!important;
+        padding: 0 12px!important;
+    }
 }
 
 .modal h2 {
