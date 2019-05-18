@@ -125,6 +125,16 @@ html, body {
     padding: 0 15px;
 }
 
+@media (max-width: 330px) {
+    .topic img {
+        display: none;
+    }
+
+    .project p {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .topic p {
         font-size: 16px!important;
