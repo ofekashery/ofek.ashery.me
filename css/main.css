@@ -57,10 +57,6 @@ html, body {
     border-top: 1px #e1e4e8 solid;
 }
 
-.project {
-    padding: 20px;
-}
-
 .project, .topic {
     height: 100%;
     display: flex;
@@ -69,11 +65,15 @@ html, body {
     backface-visibility: hidden;
     text-decoration: none !important;
     text-align: center;
-    border-radius: 3px;
-    border: 1px #e1e4e8 solid;
+    box-shadow: 0 0 4px 0 rgba(127, 127, 127, 0.2);
     background-color: #fff;
     cursor: pointer;
     transition: all 200ms ease-in-out;
+}
+
+.project {
+    padding: 20px;
+    border-radius: 6px;
 }
 
 .topic {
@@ -82,11 +82,12 @@ html, body {
     text-align: start !important;
     justify-content: right;
     align-items: center;
+    border-radius: 4px;
 }
 
 .project:hover, .topic:hover {
-    box-shadow: 0 0 10px 0 rgba(127, 127, 127, 0.2);
-    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transform: scale(1.04);
     text-decoration: none !important;
 }
 
@@ -202,4 +203,8 @@ html, body {
     margin-bottom: 8px;
     color: #6a737d;
     font-size: 14px;
+}
+
+.project-description a {
+    font-weight: 500;
 }
