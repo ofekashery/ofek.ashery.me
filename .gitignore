@@ -1,2 +1,5 @@
-projects
+.now
+.next
+node_modules
+next-env.d.ts
 .DS_Store
