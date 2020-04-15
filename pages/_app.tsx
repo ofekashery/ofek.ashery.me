@@ -19,10 +19,10 @@ const MyApp = ({ Component, pageProps, defaultTheme }: Props) => {
     <>
       <Head>
         <title>Ofek Ashery</title>
-        <meta name="description" content="16 years old developer" />
+        <meta name="description" content="A 16-year-old passionate developer from Israel" />
         <link rel="shortcut icon" href="/assets/favicon.png" />
         <meta property="og:title" content="Ofek Ashery" />
-        <meta property="og:description" content="16 years old developer" />
+        <meta property="og:description" content="A 16-year-old passionate developer from Israel" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ofek.ashery.me" />
         <meta property="og:image" content="https://ofek.ashery.me/assets/og-image.png" />
@@ -30,7 +30,7 @@ const MyApp = ({ Component, pageProps, defaultTheme }: Props) => {
         <meta name="twitter:site" content="@ofekashery" />
         <meta name="twitter:creator" content="@ofekashery" />
         <meta name="twitter:title" content="Ofek Ashery" />
-        <meta name="twitter:description" content="16 years old developer" />
+        <meta name="twitter:description" content="A 16-year-old passionate developer from Israel" />
         <meta name="twitter:image" content="https://ofek.ashery.me/assets/og-image.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
