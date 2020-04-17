@@ -33,15 +33,14 @@ const MyApp = ({ Component, pageProps, defaultTheme }: Props) => {
         <meta name="twitter:description" content="A 16-year-old passionate developer from Israel" />
         <meta name="twitter:image" content="https://ofek.ashery.me/assets/og-image.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#000" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
           rel="preload"
           as="style"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
       </Head>
       <Component {...pageProps} isDark={theme === 'dark'} toggleTheme={toggleTheme} />
     </>
