@@ -154,6 +154,7 @@ const Index = ({ isDark, toggleTheme }: Props) => {
         }
         .social {
           line-height: 2em;
+          font-weight: 400 !important;
         }
         h3 {
           margin-top: 42px;
