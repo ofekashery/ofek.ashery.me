@@ -48,7 +48,7 @@ const MyApp = ({ Component, pageProps, defaultTheme }: Props) => {
 };
 
 MyApp.getInitialProps = (ctx) => ({
-  defaultTheme: cookie.parse(ctx.ctx.req.headers.cookie || '').theme || 'light'
+  defaultTheme: cookie.parse(ctx.ctx.req.headers.cookie || '').theme || 'dark'
 });
 
 export default MyApp;
