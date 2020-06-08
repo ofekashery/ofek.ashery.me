@@ -1,30 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import DarkToggle from '../components/dark-toggle';
 
+const storageKey = 'theme';
 const themes = {
   light: {
-    background: 'white',
-    foreground: 'black',
-    gray: '#666666',
+    foreground: '#000',
+    background: '#FFF',
+    gray: '#666',
     link: '#0070F3',
     bordrColor: '#EAEAEA'
   },
   dark: {
-    background: 'black',
-    foreground: 'white',
-    gray: '#888888',
+    foreground: '#FFF',
+    background: '#000',
+    gray: '#888',
     link: '#0076FF',
-    bordrColor: '#333333'
+    bordrColor: '#333'
   }
 };
 
-interface Props {
-  isDark: boolean;
-  toggleTheme: () => void;
-}
-
-const Index = ({ isDark, toggleTheme }: Props) => {
+const Index = () => {
+  const [isDark, setDark] = useState(true);
   const theme = themes[isDark ? 'dark' : 'light'];
+
+  const setTheme = (theme: string) => {
+    setDark(theme !== 'light');
+    localStorage.setItem(storageKey, theme !== 'light' ? 'dark' : 'light');
+  };
+  const toggleTheme = () => setTheme(isDark ? 'light' : 'dark');
+  useEffect(() => setTheme(localStorage.getItem(storageKey)), []);
+
   return (
     <main>
       <div className="content">
@@ -63,6 +68,15 @@ const Index = ({ isDark, toggleTheme }: Props) => {
               <p>TV guide app for Android</p>
             </div>
           </a>
+          <a className="project" href="https://firstisrael.org.il" target="_blank" rel="noopener">
+            <div className="card">
+              <img src="/assets/logos/firstisrael.jpg" alt="FIRST Israel Logo" />
+              <h4>
+                <em>FIRST</em> Israel Website
+              </h4>
+              <p>Next.js Website + CMS for a global nonprofit</p>
+            </div>
+          </a>
           <a className="project" href="https://github.com/orange-alliance" target="_blank" rel="noopener">
             <div className="card">
               <img src="assets/logos/theorangealliance.jpg" alt="The Orange Alliance Logo" />
@@ -98,7 +112,7 @@ const Index = ({ isDark, toggleTheme }: Props) => {
               <p>School app for students</p>
             </div>
           </div>
-          <a className="project" href="https://github.com/ofekashery/first-scouter" target="_blank" rel="noopener">
+          {/* <a className="project" href="https://github.com/ofekashery/first-scouter" target="_blank" rel="noopener">
             <div className="card">
               <img src="assets/logos/first-scouter.jpg" alt="FIRST Scouter Logo" />
               <h4>FIRST Scouter</h4>
@@ -106,7 +120,7 @@ const Index = ({ isDark, toggleTheme }: Props) => {
                 Scouting app for <em>FIRST</em> competitions
               </p>
             </div>
-          </a>
+          </a> */}
         </div>
 
         <h3>Skils</h3>
@@ -170,9 +184,30 @@ const Index = ({ isDark, toggleTheme }: Props) => {
           box-sizing: border-box;
         }
         @media (max-width: 768px) {
+          .project {
+            flex: 0 50%;
+          }
+        }
+        @media (max-width: 576px) {
+          .project {
+            flex: 1;
+          }
           .projects {
             flex-direction: column;
           }
+        }
+        .card {
+          background: ${theme.background};
+          color: ${theme.foreground};
+          margin: 0;
+          width: 100%;
+          transition: all 0.2s ease;
+          padding: 24px;
+          border-radius: 6px;
+          box-shadow: ${isDark ? 'none' : '0 5px 10px rgba(0, 0, 0, 0.12)'};
+          box-sizing: border-box;
+          border: ${isDark ? `1px solid ${theme.bordrColor}` : 'none'};
+          height: 100%;
         }
         a.project:hover .card {
           transform: scale(1.04);
@@ -180,6 +215,7 @@ const Index = ({ isDark, toggleTheme }: Props) => {
         .project img {
           height: 48px;
           width: 48px;
+          border: 1px solid ${theme.bordrColor};
           border-radius: 50%;
         }
         .project h4 {
@@ -204,19 +240,6 @@ const Index = ({ isDark, toggleTheme }: Props) => {
           border-radius: 6px;
           border: 1px solid ${theme.bordrColor};
           transition: all 0.2s ease;
-        }
-        .card {
-          background: ${theme.background};
-          color: ${theme.foreground};
-          margin: 0;
-          width: 100%;
-          transition: all 0.2s ease;
-          padding: 24px;
-          border-radius: 6px;
-          box-shadow: ${isDark ? 'none' : '0 5px 10px rgba(0, 0, 0, 0.12)'};
-          box-sizing: border-box;
-          border: ${isDark ? `1px solid ${theme.bordrColor}` : 'none'};
-          height: 100%;
         }
       `}</style>
     </main>

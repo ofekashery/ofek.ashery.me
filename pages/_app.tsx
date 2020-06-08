@@ -1,20 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
-import cookie from 'cookie';
 
-type Theme = 'light' | 'dark';
-type Props = AppProps & { defaultTheme: Theme };
-
-const MyApp = ({ Component, pageProps, defaultTheme }: Props) => {
-  const [theme, setActiveTheme] = useState<Theme>(defaultTheme);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    document.cookie = `theme=${newTheme}`;
-    setActiveTheme(newTheme);
-  };
-
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
@@ -42,13 +30,9 @@ const MyApp = ({ Component, pageProps, defaultTheme }: Props) => {
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
       </Head>
-      <Component {...pageProps} isDark={theme === 'dark'} toggleTheme={toggleTheme} />
+      <Component {...pageProps} />
     </>
   );
 };
-
-MyApp.getInitialProps = (ctx) => ({
-  defaultTheme: cookie.parse(ctx.ctx.req.headers.cookie || '').theme || 'dark'
-});
 
 export default MyApp;
