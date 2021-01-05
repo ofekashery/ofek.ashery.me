@@ -1,248 +1,185 @@
-import React, { useState, useEffect } from 'react';
-import DarkToggle from '../components/dark-toggle';
-
-const storageKey = 'theme';
-const themes = {
-  light: {
-    foreground: '#000',
-    background: '#FFF',
-    gray: '#666',
-    link: '#0070F3',
-    bordrColor: '#EAEAEA'
-  },
-  dark: {
-    foreground: '#FFF',
-    background: '#000',
-    gray: '#888',
-    link: '#0076FF',
-    bordrColor: '#333'
-  }
-};
+import React from 'react';
+import Head from 'next/head';
+import Project from '../components/project';
 
 const Index = () => {
-  const [isDark, setDark] = useState(true);
-  const theme = themes[isDark ? 'dark' : 'light'];
-
-  const setTheme = (theme: string) => {
-    setDark(theme !== 'light');
-    localStorage.setItem(storageKey, theme !== 'light' ? 'dark' : 'light');
-  };
-  const toggleTheme = () => setTheme(isDark ? 'light' : 'dark');
-  useEffect(() => setTheme(localStorage.getItem(storageKey)), []);
-
   return (
-    <main>
+    <>
+      <Head>
+        <title>Ofek Ashery</title>
+        <meta name="description" content="A 17-year-old passionate developer from Israel" />
+        <link rel="shortcut icon" href="/assets/favicon.png" />
+        <meta property="og:title" content="Ofek Ashery" />
+        <meta property="og:description" content="A 17-year-old passionate developer from Israel" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ofek.ashery.me" />
+        <meta property="og:image" content="https://ofek.ashery.me/assets/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@ofekashery" />
+        <meta name="twitter:creator" content="@ofekashery" />
+        <meta name="twitter:title" content="Ofek Ashery" />
+        <meta name="twitter:description" content="A 17-year-old passionate developer from Israel" />
+        <meta name="twitter:image" content="https://ofek.ashery.me/assets/og-image.png" />
+      </Head>
       <div className="content">
-        <div style={{ display: 'flex' }}>
-          <h1>Ofek Ashery</h1>
-          <DarkToggle onClick={toggleTheme} theme={isDark ? 'dark' : 'light'} />
-        </div>
+        <h1>Ofek Ashery</h1>
         <div className="bio">
-          <p>Hello! I'm Ofek, a 16-year-old passionate developer from Israel.</p>
+          <p>Hey, I'm Ofek, a 17-year-old passionate developer from Israel.</p>
           <p>
-            I love contributing to open-source projects. <br />I participate in hackathons that give me lot of
-            experience and skills.
+            I'm focused on building fast &amp; beautiful products with JavaScript, specifically React.js and Next.js. I
+            love contributing to open-source projects.
           </p>
-          <p>I'm currently enrolled in 10th grade at Maccabim-Re'ut High School.</p>
-          <p className="social">
-            <a href="https://github.com/ofekashery" target="_blank" rel="noopener">
-              GitHub
-            </a>
-            {' | '}
-            <a href="https://www.linkedin.com/in/ofekashery" target="_blank" rel="noopener">
-              Linkedin
-            </a>
-            {' | '}
-            <a href="mailto:ofek.ashery@gmail.com?subject=Hello Ofek!&amp;body=Hi," target="_blank">
-              Email
-            </a>
+          <p>
+            Working with{' '}
+            <a href="https://www.firstinspires.org" target="_blank" rel="nofollow noopener">
+              <em>FIRST</em>
+            </a>{' '}
+            to inspire young people to be science and technology leaders and innovators.
           </p>
         </div>
+        <div className="social">
+          <a href="https://github.com/ofekashery" target="_blank" rel="noopener">
+            GitHub
+          </a>
+          <span>/</span>
+          <a href="https://www.linkedin.com/in/ofekashery" target="_blank" rel="noopener">
+            Linkedin
+          </a>
+          <span>/</span>
+          <a href="mailto:ofek.ashery@gmail.com" target="_blank">
+            Email
+          </a>
+        </div>
 
-        <h3>Some of my projects that I've built</h3>
+        <h2>Some projects that I've built</h2>
         <div className="projects">
-          <a className="project" href="https://github.com/ofekashery/the-channels" target="_blank" rel="noopener">
-            <div className="card">
-              <img src="/assets/logos/thechannels.jpg" alt="The Channels Logo" />
-              <h4>The Channels</h4>
-              <p>TV guide app for Android</p>
-            </div>
-          </a>
-          <a className="project" href="https://firstisrael.org.il" target="_blank" rel="noopener">
-            <div className="card">
-              <img src="/assets/logos/firstisrael.jpg" alt="FIRST Israel Logo" />
-              <h4>
+          <Project
+            title="The Channels"
+            description="TV guide app for Android"
+            logo="/assets/logos/thechannels.jpg"
+            link="https://github.com/ofekashery/the-channels"
+          />
+          <Project
+            title="FIRST Israel"
+            titleFormatted={
+              <>
                 <em>FIRST</em> Israel Website
-              </h4>
-              <p>Next.js Website + CMS for a global nonprofit</p>
-            </div>
-          </a>
-          <a className="project" href="https://github.com/orange-alliance" target="_blank" rel="noopener">
-            <div className="card">
-              <img src="assets/logos/theorangealliance.jpg" alt="The Orange Alliance Logo" />
-              <h4>The Orange Alliance</h4>
-              <p>
-                The official data provider for <em>FIRST</em> Tech Challenge
-              </p>
-            </div>
-          </a>
-          <a
-            className="project"
-            href="https://github.com/ofekashery/vertical-stack-in-card"
-            target="_blank"
-            rel="noopener"
-          >
-            <div className="card">
-              <img src="assets/logos/home-assistant.jpg" alt="Home Assistant Logo" />
-              <h4>vertical-stack-in-card</h4>
-              <p>Custom card for Home Assistant</p>
-            </div>
-          </a>
-          <a className="project" href="http://talia-ram.co.il" target="_blank" rel="noopener">
-            <div className="card">
-              <img src="assets/logos/talia-ram.jpg" alt="Talia Ram Logo" />
-              <h4>Talia Ram Website</h4>
-              <p>Bootstrap website for a lawyer</p>
-            </div>
-          </a>
-          <div className="project">
-            <div className="card">
-              <img src="assets/logos/west-valley.jpg" alt="West Valley Logo" />
-              <h4>West Valley Yifat School</h4>
-              <p>School app for students</p>
-            </div>
-          </div>
-          {/* <a className="project" href="https://github.com/ofekashery/first-scouter" target="_blank" rel="noopener">
-            <div className="card">
-              <img src="assets/logos/first-scouter.jpg" alt="FIRST Scouter Logo" />
-              <h4>FIRST Scouter</h4>
-              <p>
-                Scouting app for <em>FIRST</em> competitions
-              </p>
-            </div>
-          </a> */}
+              </>
+            }
+            description="Next.js Website + CMS for a global nonprofit"
+            logo="/assets/logos/firstisrael.jpg"
+            link="https://firstisrael.org.il"
+          />
+          <Project
+            title="The Orange Alliance"
+            description={
+              <>
+                A project for accessing the <em>FIRST</em> Tech Challenge event results
+              </>
+            }
+            logo="/assets/logos/theorangealliance.jpg"
+            link="https://github.com/orange-alliance"
+          />
+          <Project
+            title="vertical-stack-in-card"
+            description="Custom card for Home Assistant"
+            logo="/assets/logos/homeassistant.jpg"
+            link="https://github.com/ofekashery/vertical-stack-in-card"
+          />
+          <Project
+            title="Talia Ram Website"
+            description="Website for a lawyer"
+            logo="/assets/logos/taliaram.jpg"
+            link="http://talia-ram.co.il"
+          />
         </div>
 
-        <h3>Skils</h3>
-        <div className="skils">
-          <div className="skil">Frontend</div>
-          <div className="skil">React</div>
-          <div className="skil">JavaScript</div>
-          <div className="skil">TypeScript</div>
-          <div className="skil">CSS</div>
-          <div className="skil">Flutter</div>
-          <div className="skil">Python</div>
-          <div className="skil">Git</div>
+        <h2>Skills</h2>
+        <div className="skills">
+          <div className="skill">JavaScript</div>
+          <div className="skill">React.js</div>
+          <div className="skill">Next.js</div>
+          <div className="skill">CSS</div>
+          <div className="skill">Flutter</div>
+          <div className="skill">Python</div>
+          <div className="skill">Node.js</div>
+          <div className="skill">Git</div>
+          <div className="skill">User Interface Design</div>
+          <div className="skill">Sketch</div>
+          <div className="skill">Figma</div>
         </div>
       </div>
       <style global jsx>{`
         ::selection {
-          background: ${theme.foreground};
-          color: ${theme.background};
+          background: #fff;
+          color: #000;
         }
         body {
           margin: 0;
-          font-family: 'Inter', sans-serif;
-          background-color: ${theme.background};
-          color: ${theme.foreground};
-          line-height: 1.47059;
-          letter-spacing: -0.022em;
-          transition: background-color 0.2s ease, color 0.2s ease;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+            Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+          background: #000;
+          color: #fff;
+          line-height: 1.4;
         }
         a {
-          cursor: pointer;
-          color: ${theme.link};
+          color: #0070f3;
           text-decoration: none;
         }
       `}</style>
       <style jsx>{`
         .content {
-          max-width: 768px;
+          max-width: 640px;
           margin: 0 auto;
           padding: 36px;
+        }
+        h1 {
+          font-size: 32px;
+          line-height: 1.2;
+          margin: 1em 0;
         }
         .bio p {
           font-size: 18px;
           margin: 8px 0;
-          font-weight: 300;
+          font-weight: 400;
+          color: #aaa;
+        }
+        .bio a {
+          color: #ccc;
+          text-decoration: none;
+        }
+        .bio a:hover,
+        .bio a:focus {
+          color: #fff;
+          text-decoration: underline;
         }
         .social {
-          line-height: 2em;
-          font-weight: 400 !important;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 2;
         }
-        h3 {
-          margin-top: 42px;
+        .social span {
+          color: #888;
+          margin: 0 8px;
         }
-        .projects {
-          display: flex;
-          flex-wrap: wrap;
-          margin: -12px;
+        h2 {
+          font-size: 20px;
+          margin: 36px 0 12px;
         }
-        .project {
-          flex-basis: 33%;
-          padding: 12px;
-          box-sizing: border-box;
-        }
-        @media (max-width: 768px) {
-          .project {
-            flex: 0 50%;
-          }
-        }
-        @media (max-width: 576px) {
-          .project {
-            flex: 1;
-          }
-          .projects {
-            flex-direction: column;
-          }
-        }
-        .card {
-          background: ${theme.background};
-          color: ${theme.foreground};
-          margin: 0;
-          width: 100%;
-          transition: all 0.2s ease;
-          padding: 24px;
-          border-radius: 6px;
-          box-shadow: ${isDark ? 'none' : '0 5px 10px rgba(0, 0, 0, 0.12)'};
-          box-sizing: border-box;
-          border: ${isDark ? `1px solid ${theme.bordrColor}` : 'none'};
-          height: 100%;
-        }
-        a.project:hover .card {
-          transform: scale(1.04);
-        }
-        .project img {
-          height: 48px;
-          width: 48px;
-          border: 1px solid ${theme.bordrColor};
-          border-radius: 50%;
-        }
-        .project h4 {
-          font-weight: 600;
-          margin: 12px 0px 0px;
-        }
-        .project p {
-          font-size: 14px;
-          margin: 6px 0px 0px;
-          color: ${theme.gray};
-        }
-        .skils {
+        .skills {
           display: flex;
           flex-wrap: wrap;
           margin: -4px;
         }
-        .skil {
-          background: ${theme.background};
-          color: ${theme.foreground};
-          padding: 8px 16px;
+        .skill {
+          padding: 10px 16px;
           margin: 4px;
           border-radius: 6px;
-          border: 1px solid ${theme.bordrColor};
-          transition: all 0.2s ease;
+          border: 1px solid #333;
+          line-height: 1;
         }
       `}</style>
-    </main>
+    </>
   );
 };
 
