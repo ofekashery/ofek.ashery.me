@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Project = ({ title, titleFormatted = title, description, link, logo }) => {
   return (
     <>

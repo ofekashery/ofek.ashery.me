@@ -1,6 +1,12 @@
 {
   "name": "personal-website",
+  "description": "",
   "author": "Ofek Ashery",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofekashery/ofek.ashery.me.git"
+  },
   "scripts": {
     "dev": "next dev",
     "export": "next export",
@@ -8,13 +14,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^10.0.4",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "next": "^10.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/node": "^12.7.2",
-    "@types/react": "^16.14.2",
-    "typescript": "^3.8.3"
+    "@types/node": "^12.12.6",
+    "@types/react": "^17.0.4",
+    "typescript": "^4.2.4"
   }
 }
