@@ -55,7 +55,7 @@ const Index = () => {
         <div className="projects">
           <Project
             title="The Channels"
-            description="TV guide app for Android"
+            description="Open-source TV guide app"
             logo="/assets/logos/thechannels.jpg"
             link="https://github.com/ofekashery/the-channels"
           />
@@ -131,16 +131,16 @@ const Index = () => {
         .content {
           max-width: 640px;
           margin: 0 auto;
-          padding: 36px;
+          padding: 2.25rem;
         }
         h1 {
-          font-size: 32px;
+          font-size: 2rem;
           line-height: 1.2;
           margin: 1em 0;
         }
         .bio p {
-          font-size: 18px;
-          margin: 8px 0;
+          font-size: 1.125rem;
+          margin: 0.5rem 0;
           font-weight: 400;
           color: #aaa;
         }
@@ -154,28 +154,28 @@ const Index = () => {
           text-decoration: underline;
         }
         .social {
-          font-size: 18px;
+          font-size: 1.125rem;
           font-weight: 500;
           line-height: 2;
         }
         .social span {
           color: #888;
-          margin: 0 8px;
+          margin: 0 0.5rem;
         }
         h2 {
-          font-size: 20px;
-          margin: 36px 0 12px;
+          font-size: 1.25rem;
+          margin: 2.25rem 0 0.75rem;
         }
         .skills {
           display: flex;
           flex-wrap: wrap;
-          margin: -4px;
+          margin: -0.25rem;
         }
         .skill {
-          padding: 10px 16px;
-          margin: 4px;
-          border-radius: 6px;
-          border: 1px solid #333;
+          padding: 0.625rem 1rem;
+          margin: 0.25rem;
+          border-radius: 0.375rem;
+          border: 0.0625rem solid #333;
           line-height: 1;
         }
       `}</style>
