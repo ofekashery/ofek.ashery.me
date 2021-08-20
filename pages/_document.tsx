@@ -5,20 +5,14 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+          <link rel="preconnect" href="https://www.google-analytics.com" />
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+        </Head>
         <body>
           <Main />
           <NextScript />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43849303-8" />
-          <script
-            async
-            dangerouslySetInnerHTML={{
-              __html: `window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'UA-43849303-8');`
-            }}
-          />
         </body>
       </Html>
     );

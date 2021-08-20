@@ -24,34 +24,34 @@ const Index = () => {
       <div className="content">
         <h1>Ofek Ashery</h1>
         <div className="bio">
-          <p>Hey, I'm Ofek, a 17-year-old passionate developer from Israel.</p>
+          <p>Hey, I’m Ofek, a 17-year-old passionate developer from Israel.</p>
           <p>
-            I'm focused on building fast &amp; beautiful products with JavaScript, specifically React.js and Next.js. I
+            I’m focused on building fast &amp; beautiful products with JavaScript, specifically React.js and Next.js. I
             love contributing to open-source projects.
           </p>
           <p>
             Working with{' '}
-            <a href="https://www.firstinspires.org" target="_blank" rel="nofollow noopener">
+            <a href="https://www.firstinspires.org" target="_blank" rel="noopener noreferrer">
               <em>FIRST</em>
             </a>{' '}
             to inspire young people to be science and technology leaders and innovators.
           </p>
         </div>
         <div className="social">
-          <a href="https://github.com/ofekashery" target="_blank" rel="noopener">
+          <a href="https://github.com/ofekashery" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
           <span>/</span>
-          <a href="https://www.linkedin.com/in/ofekashery" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/in/ofekashery" target="_blank" rel="noopener noreferrer">
             Linkedin
           </a>
           <span>/</span>
-          <a href="mailto:ofek.ashery@gmail.com" target="_blank">
+          <a href="mailto:ofek.ashery@gmail.com" target="_blank" rel="noopener noreferrer">
             Email
           </a>
         </div>
 
-        <h2>Some projects that I've built</h2>
+        <h2>Some projects that I’ve built</h2>
         <div className="projects">
           <Project
             title="The Channels"

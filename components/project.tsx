@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Project = ({ title, titleFormatted = title, description, link, logo }) => {
   return (
     <>
-      <a className="project__container" href={link} target="_blank" rel="nofollow noopener">
+      <a className="project__container" href={link} target="_blank" rel="noopener noreferrer">
         <Image className="project__logo" src={logo} alt={`${title} Logo`} width={40} height={40} />
         <div className="project__content">
           <span className="project__title">{titleFormatted}</span>
