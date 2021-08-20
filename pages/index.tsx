@@ -71,6 +71,12 @@ const Index = () => {
             link="https://firstisrael.org.il"
           />
           <Project
+            title="Geist"
+            description="Design system for building modern websites and applications"
+            logo="/assets/logos/geist.jpg"
+            link="https://github.com/geist-org/react"
+          />
+          <Project
             title="The Orange Alliance"
             description={
               <>
