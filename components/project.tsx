@@ -33,6 +33,7 @@ const Project = ({ title, titleFormatted = title, description, link, logo }) => 
           border-radius: 50%;
         }
         .project__content {
+          flex: 1;
           margin-left: 0.875rem;
         }
         .project__title {
