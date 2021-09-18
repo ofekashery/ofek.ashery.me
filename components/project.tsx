@@ -36,7 +36,7 @@ const Project = ({ title, titleFormatted = title, description, link, logo }) => 
           margin-left: 0.875rem;
         }
         .project__title {
-          font-weight: 600;
+          font-weight: 500;
           margin: 0;
           font-size: 1rem;
           line-height: 1;

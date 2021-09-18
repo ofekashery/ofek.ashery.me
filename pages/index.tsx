@@ -122,14 +122,14 @@ const Index = () => {
         }
         body {
           margin: 0;
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+          font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
             Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           background: #000;
           color: #fff;
           line-height: 1.4;
         }
         a {
-          color: #0070f3;
+          color: #0099ff;
           text-decoration: none;
         }
       `}</style>
@@ -143,6 +143,12 @@ const Index = () => {
           font-size: 2rem;
           line-height: 1.2;
           margin: 1em 0;
+          background: linear-gradient(135deg, #0099ff, #00bbff);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: #fff;
+          display: inline-block;
         }
         .bio p {
           font-size: 1.125rem;
@@ -151,7 +157,7 @@ const Index = () => {
           color: #aaa;
         }
         .bio a {
-          color: #ccc;
+          color: #ddd;
           text-decoration: none;
         }
         .bio a:hover,
@@ -164,12 +170,22 @@ const Index = () => {
           font-weight: 500;
           line-height: 2;
         }
+        .social a {
+          transition: opacity 0.2s;
+        }
+        .social a:hover,
+        .social a:focus {
+          opacity: 0.75;
+          text-decoration: none;
+        }
         .social span {
           color: #888;
           margin: 0 0.5rem;
+          font-weight: 400;
         }
         h2 {
           font-size: 1.25rem;
+          font-weight: 600;
           margin: 2.25rem 0 0.75rem;
         }
         .skills {
