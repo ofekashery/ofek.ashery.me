@@ -17,20 +17,29 @@ const Project = ({ title, titleFormatted = title, description, link, logo }) => 
           flex-direction: row;
           align-items: center;
           width: 100%;
-          transition: all 0.2s ease;
           padding: 0.875rem;
-          border-radius: 0.5rem;
+          border-radius: 0.75rem;
           color: inherit;
           box-sizing: border-box;
+          transition: all 0.2s ease;
         }
         .project__container:hover,
-        .project__container:focus {
-          transform: scale(1.04);
-          background: #181818;
+        .project__container:focus-visible {
+          background: rgba(255, 255, 255, 0.1);
           outline: none;
+          transform: scale(1.025);
+        }
+        .project__container:active {
+          transform: scale(0.975);
         }
         .project__container :global(.project__logo) {
           border-radius: 50%;
+          opacity: 0.75;
+          transition: all 0.2s ease;
+        }
+        .project__container:hover :global(.project__logo),
+        .project__container:focus-visible :global(.project__logo) {
+          opacity: 1;
         }
         .project__content {
           flex: 1;
@@ -46,7 +55,7 @@ const Project = ({ title, titleFormatted = title, description, link, logo }) => 
           font-size: 0.875rem;
           line-height: 1.2;
           margin: 0.125rem 0 0;
-          color: #888;
+          color: #999;
         }
       `}</style>
     </>

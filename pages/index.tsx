@@ -24,7 +24,7 @@ const Index = () => {
       <div className="content">
         <h1>Ofek Ashery</h1>
         <div className="bio">
-          <p>Hey, I’m Ofek, a 17-year-old passionate developer from Israel.</p>
+          <p>Hey, I’m Ofek, a 18-year-old passionate developer from Israel.</p>
           <p>
             I’m focused on building fast &amp; beautiful products with JavaScript, specifically React.js and Next.js. I
             love contributing to open-source projects.
@@ -92,12 +92,6 @@ const Index = () => {
             logo="/assets/logos/homeassistant.jpg"
             link="https://github.com/ofekashery/vertical-stack-in-card"
           />
-          <Project
-            title="Talia Ram Website"
-            description="Website for a lawyer"
-            logo="/assets/logos/taliaram.jpg"
-            link="http://talia-ram.co.il"
-          />
         </div>
 
         <h2>Skills</h2>
@@ -154,10 +148,10 @@ const Index = () => {
           font-size: 1.125rem;
           margin: 0.5rem 0;
           font-weight: 400;
-          color: #aaa;
+          color: #ccc;
         }
         .bio a {
-          color: #ddd;
+          color: #fff;
           text-decoration: none;
         }
         .bio a:hover,
@@ -192,6 +186,7 @@ const Index = () => {
           display: flex;
           flex-wrap: wrap;
           margin: -0.25rem;
+          padding-bottom: 1rem;
         }
         .skill {
           padding: 0.625rem 1rem;
