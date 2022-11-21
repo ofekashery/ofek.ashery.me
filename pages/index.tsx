@@ -24,10 +24,12 @@ const Index = () => {
       <div className="content">
         <h1>Ofek Ashery</h1>
         <div className="bio">
-          <p>Hey, I’m Ofek, a 18-year-old passionate developer from Israel.</p>
           <p>
-            I’m focused on building fast &amp; beautiful products with JavaScript, specifically React.js and Next.js. I
-            love contributing to open-source projects.
+            Hey, I’m <span>Ofek</span>, a 18-year-old passionate developer from Israel.
+          </p>
+          <p>
+            I’m focused on building <span>fast &amp; beautiful products</span> with JavaScript, specifically React.js
+            and Next.js. I love contributing to open-source projects.
           </p>
           <p>
             Working with{' '}
@@ -145,12 +147,14 @@ const Index = () => {
           display: inline-block;
         }
         .bio p {
-          font-size: 1.125rem;
+          font-size: 1rem;
           margin: 0.5rem 0;
           font-weight: 400;
-          color: #ccc;
+          color: #9b9c9c;
+          line-height: 1.6;
         }
-        .bio a {
+        .bio a,
+        .bio span {
           color: #fff;
           text-decoration: none;
         }
