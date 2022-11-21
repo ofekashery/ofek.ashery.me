@@ -191,12 +191,15 @@ const Index = () => {
           flex-wrap: wrap;
           margin: -0.25rem;
           padding-bottom: 1rem;
+          max-width: 36rem;
         }
         .skill {
-          padding: 0.625rem 1rem;
-          margin: 0.25rem;
-          border-radius: 0.375rem;
-          border: 0.0625rem solid #333;
+          font-size: 0.875rem;
+          font-weight: 500;
+          padding: 0.75em 1em;
+          margin: 0.375em;
+          border-radius: 0.5em;
+          border: 1px solid #333;
           line-height: 1;
         }
       `}</style>
