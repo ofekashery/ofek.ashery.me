@@ -7,10 +7,10 @@ const Index = () => {
     <>
       <Head>
         <title>Ofek Ashery</title>
-        <meta name="description" content="A 17-year-old passionate developer from Israel" />
+        <meta name="description" content="A 19-year-old passionate developer from Israel" />
         <link rel="shortcut icon" href="/assets/favicon.png" />
         <meta property="og:title" content="Ofek Ashery" />
-        <meta property="og:description" content="A 17-year-old passionate developer from Israel" />
+        <meta property="og:description" content="A 19-year-old passionate developer from Israel" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ofek.ashery.me" />
         <meta property="og:image" content="https://ofek.ashery.me/assets/og-image.png" />
@@ -18,14 +18,14 @@ const Index = () => {
         <meta name="twitter:site" content="@ofekashery" />
         <meta name="twitter:creator" content="@ofekashery" />
         <meta name="twitter:title" content="Ofek Ashery" />
-        <meta name="twitter:description" content="A 17-year-old passionate developer from Israel" />
+        <meta name="twitter:description" content="A 19-year-old passionate developer from Israel" />
         <meta name="twitter:image" content="https://ofek.ashery.me/assets/og-image.png" />
       </Head>
       <div className="content">
         <h1>Ofek Ashery</h1>
         <div className="bio">
           <p>
-            Hey, I’m <span>Ofek</span>, a 18-year-old passionate developer from Israel.
+            Hey, I’m <span>Ofek</span>, a 19-year-old passionate developer from Israel.
           </p>
           <p>
             I’m focused on building <span>fast &amp; beautiful products</span> with JavaScript, specifically React.js
@@ -98,7 +98,7 @@ const Index = () => {
 
         <h2>Skills</h2>
         <div className="skills">
-          <div className="skill">JavaScript</div>
+          <div className="skill">TypeScript</div>
           <div className="skill">React.js</div>
           <div className="skill">Next.js</div>
           <div className="skill">CSS</div>
