@@ -1,63 +1,29 @@
-import React from 'react';
 import Image from 'next/image';
+import ArrowUpRightIcon from '@heroicons/react/24/outline/ArrowUpRightIcon';
 
 const Project = ({ title, titleFormatted = title, description, link, logo }) => {
   return (
     <>
-      <a className="project__container" href={link} target="_blank" rel="noopener noreferrer">
-        <Image className="project__logo" src={logo} alt={`${title} Logo`} width={40} height={40} />
-        <div className="project__content">
-          <span className="project__title">{titleFormatted}</span>
-          <p className="project__description">{description}</p>
+      <a
+        className="group flex items-center px-4 py-3 my-2 rounded-xl text-current bg-gray-1 border border-gray-2 transition-colors duration-200 hover:bg-gray-2 focus-visible:bg-gray-2"
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image className="rounded-lg" src={logo} alt={`${title} Logo`} width={28} height={28} />
+        <div className="flex-1 pl-4">
+          <span className="text-sm font-medium flex items-center">
+            {titleFormatted}
+
+            <ArrowUpRightIcon
+              className="opacity-0 group-hover:opacity-100 w-3 h-3 ml-1 transition-opacity duration-200"
+              strokeWidth={2}
+              focusable="false"
+            />
+          </span>
+          <p className="text-sm text-gray-9">{description}</p>
         </div>
       </a>
-      <style jsx>{`
-        .project__container {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          width: 100%;
-          padding: 0.875rem;
-          border-radius: 0.75rem;
-          color: inherit;
-          box-sizing: border-box;
-          transition: all 0.2s ease;
-        }
-        .project__container:hover,
-        .project__container:focus-visible {
-          background: rgba(255, 255, 255, 0.1);
-          outline: none;
-          transform: scale(1.025);
-        }
-        .project__container:active {
-          transform: scale(0.975);
-        }
-        .project__container :global(.project__logo) {
-          border-radius: 50%;
-          opacity: 0.75;
-          transition: all 0.2s ease;
-        }
-        .project__container:hover :global(.project__logo),
-        .project__container:focus-visible :global(.project__logo) {
-          opacity: 1;
-        }
-        .project__content {
-          flex: 1;
-          margin-left: 0.875rem;
-        }
-        .project__title {
-          font-weight: 500;
-          margin: 0;
-          font-size: 1rem;
-          line-height: 1;
-        }
-        .project__description {
-          font-size: 0.875rem;
-          line-height: 1.2;
-          margin: 0.125rem 0 0;
-          color: #999;
-        }
-      `}</style>
     </>
   );
 };
