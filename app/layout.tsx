@@ -9,7 +9,7 @@ const inter = Inter({
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="bg-background text-white">{children}</body>
+      <body className="bg-background text-white antialiased">{children}</body>
     </html>
   );
 };

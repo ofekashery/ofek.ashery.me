@@ -3,8 +3,8 @@ import ChevronRightIcon from '@heroicons/react/24/outline/ChevronRightIcon';
 
 const Page = () => {
   return (
-    <div className="max-w-2xl	mx-auto pt-16 md:pt-32 px-8 pb-8">
-      <h1 className="text-2xl font-bold mb-4">Ofek Ashery</h1>
+    <div className="max-w-2xl	mx-auto pt-12 md:pt-32 px-8 pb-8">
+      <h1 className="text-3xl font-bold mb-4 tracking-tight">Ofek Ashery</h1>
       <div className="text-gray-11 leading-6">
         <p>
           Hey, I’m <span className="text-white">Ofek</span>, a 19-year-old passionate developer from Israel.
