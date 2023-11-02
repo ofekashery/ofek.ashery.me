@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -7,10 +7,14 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+export const viewport: Viewport = {
+  themeColor: '#101010',
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ofek.ashery.me'),
   title: 'Ofek Ashery',
   description: 'A 19-year-old passionate developer from Israel.',
-  themeColor: '#101010',
   icons: {
     shortcut: '/assets/favicon.png',
   },
@@ -21,7 +25,7 @@ export const metadata: Metadata = {
     description: 'A 19-year-old passionate developer from Israel.',
     images: [
       {
-        url: 'https://ofek.ashery.me/assets/og-image.png',
+        url: '/assets/og-image.png',
         width: 1200,
         height: 630,
       },
