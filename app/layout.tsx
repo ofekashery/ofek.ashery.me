@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://ofek.ashery.me'),
   title: 'Ofek Ashery',
-  description: 'A 19-year-old passionate developer from Israel.',
+  description: 'Building fast and beautiful products.',
   icons: {
     shortcut: '/assets/favicon.png',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://ofek.ashery.me',
     title: 'Ofek Ashery',
-    description: 'A 19-year-old passionate developer from Israel.',
+    description: 'Building fast and beautiful products.',
     images: [
       {
         url: '/assets/og-image.png',

@@ -3,15 +3,13 @@ import ChevronRightIcon from '@heroicons/react/24/outline/ChevronRightIcon';
 
 const Page = () => {
   return (
-    <div className="max-w-2xl	mx-auto pt-16 md:pt-32 px-8 pb-8">
-      <h1 className="text-4xl font-semibold mb-6 tracking-tight">Ofek Ashery</h1>
+    <div className="max-w-2xl	mx-auto pt-16 md:pt-32 px-8 pb-12">
+      <h1 className="text-4xl font-semibold mb-8 tracking-tight">Ofek Ashery</h1>
       <div className="text-gray-11 leading-6">
         <p>
-          Hey, I’m <span className="text-white">Ofek</span>, a 19-year-old passionate developer from Israel.
-        </p>
-        <p className="mt-2">
-          I’m focused on building <span className="text-white">fast &amp; beautiful products</span> with JavaScript,
-          specifically React.js and Next.js. I love contributing to open-source projects.
+          Hey, I’m <span className="text-white">Ofek</span>. I’m focused on building{' '}
+          <span className="text-white">fast &amp; beautiful products</span> with JavaScript, specifically React.js and
+          Next.js.
         </p>
         <p className="mt-2">
           Working with{' '}
@@ -42,46 +40,38 @@ const Page = () => {
 
       <h2 className="text-lg font-semibold mt-12 mb-3">Some projects that I’ve built</h2>
       <div>
-        <Project
-          title="FIRST"
-          description="This is where I work and spent the last few years."
-          logo="/assets/projects/firstisrael.jpg"
-          link="https://firstisrael.org.il"
-        />
-        <Project
-          title="Geist"
-          description="Design system for building modern websites and applications."
-          logo="/assets/projects/geist.jpg"
-          link="https://github.com/geist-org/react"
-        />
+        <Project title="FIRST" logo="/assets/projects/firstisrael.jpg" link="https://firstisrael.org.il">
+          This is where I work and spent the last few years.
+        </Project>
+        <Project title="Geist" logo="/assets/projects/geist.jpg" link="https://github.com/geist-org/react">
+          Design system for building modern websites and applications.
+        </Project>
         <Project
           title="The Orange Alliance"
-          description={
-            <>
-              A project for accessing the <em>FIRST</em> Tech Challenge event results.
-            </>
-          }
           logo="/assets/projects/theorangealliance.jpg"
           link="https://github.com/the-orange-alliance"
-        />
+        >
+          A project for accessing the <em>FIRST</em> Tech Challenge event results.
+        </Project>
         <Project
           title="vertical-stack-in-card"
-          description="A sleek and modern custom card for Home Assistant."
           logo="/assets/projects/homeassistant.jpg"
           link="https://github.com/ofekashery/vertical-stack-in-card"
-        />
+        >
+          A sleek and modern custom card for Home Assistant.
+        </Project>
         <Project
           title="The Channels"
-          description="An open-source TV guide app."
           logo="/assets/projects/thechannels.jpg"
           link="https://github.com/ofekashery/the-channels"
-        />
+        >
+          An open-source TV guide app.
+        </Project>
         <a
           href="https://github.com/ofekashery"
           target="_blank"
           rel="noopener noreferrer"
-          className="
-          inline-flex items-center mt-2 px-2 py-1.5 text-sm font-medium rounded-md transition-colors duration-200 hover:bg-link/10 focus-visible:bg-link/10"
+          className="inline-flex items-center mt-2 px-2 py-1.5 text-sm font-medium rounded-md transition-colors duration-200 hover:bg-link/10 focus-visible:bg-link/10"
         >
           View more on GitHub
           <ChevronRightIcon className="inline w-4 h-4 ml-1" strokeWidth={2} />
@@ -95,6 +85,7 @@ const Page = () => {
           'React.js',
           'Next.js',
           'Web Security',
+          'Architecture',
           'CSS',
           'Python',
           'Node.js',
@@ -103,7 +94,7 @@ const Page = () => {
           'Sketch',
           'Figma',
         ].map((skill) => (
-          <div key={skill} className="px-4 py-2 rounded-lg text-sm font-semibold border border-gray-3 mr-2 mb-2">
+          <div key={skill} className="px-3.5 py-2 rounded-lg text-sm font-semibold border border-gray-3 mr-2 mb-2">
             {skill}
           </div>
         ))}
