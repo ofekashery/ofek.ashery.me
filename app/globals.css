@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 a {
-    @apply text-link;
+  @apply text-link;
 }

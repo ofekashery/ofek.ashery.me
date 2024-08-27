@@ -11,23 +11,18 @@ interface ProjectProps {
 const Project: React.FC<ProjectProps> = ({ title, link, logo, children }) => {
   return (
     <>
-      <a
-        className="group flex items-center px-4 py-3 my-2 rounded-xl text-current bg-gray-1 border border-gray-2 transition-colors duration-200 hover:bg-gray-2 focus-visible:bg-gray-2"
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a className="group flex items-center gap-4 text-current" href={link} target="_blank" rel="noopener noreferrer">
         <Image className="rounded-lg" src={logo} alt={`${title} Logo`} width={28} height={28} />
-        <div className="flex-1 pl-4">
-          <span className="text-sm font-medium flex items-center">
+        <div className="flex-1 py-3 border-b border-neutral-800/50">
+          <span className="inline-flex text-sm font-medium items-center rounded-md group-hover:bg-neutral-800 group-hover:px-1.5 group-hover:-mx-1.5 group-hover:py-0.5 group-hover:-my-0.5">
             {title}
             <ArrowUpRightIcon
-              className="opacity-0 w-3 h-3 ml-0.5 transition-all duration-200 group-hover:opacity-100 group-hover:ml-1"
+              className="opacity-0 w-3 h-3 ml-0.5 transition-all duration-500 group-hover:opacity-100 group-hover:ml-1"
               strokeWidth={2}
               focusable="false"
             />
           </span>
-          <p className="text-sm text-gray-9">{children}</p>
+          <p className="text-sm text-neutral-500">{children}</p>
         </div>
       </a>
     </>
