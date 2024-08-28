@@ -13,7 +13,7 @@ const Project: React.FC<ProjectProps> = ({ title, link, logo, children }) => {
     <>
       <a className="group flex items-center gap-4 text-current" href={link} target="_blank" rel="noopener noreferrer">
         <Image className="rounded-lg" src={logo} alt={`${title} Logo`} width={28} height={28} />
-        <div className="flex-1 py-3 border-b border-neutral-800/50">
+        <div className="flex-1 py-3 border-b border-neutral-800/80">
           <span className="inline-flex text-sm font-medium items-center rounded-md group-hover:bg-neutral-800 group-hover:px-1.5 group-hover:-mx-1.5 group-hover:py-0.5 group-hover:-my-0.5">
             {title}
             <ArrowUpRightIcon
@@ -22,7 +22,7 @@ const Project: React.FC<ProjectProps> = ({ title, link, logo, children }) => {
               focusable="false"
             />
           </span>
-          <p className="text-sm text-neutral-500">{children}</p>
+          <p className="text-sm text-neutral-400">{children}</p>
         </div>
       </a>
     </>
