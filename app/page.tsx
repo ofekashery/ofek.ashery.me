@@ -60,7 +60,7 @@ const Page = () => {
           href="https://github.com/ofekashery"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center mt-2 px-2 py-1.5 text-sm font-medium rounded-md transition-colors duration-200 hover:bg-link/10 focus-visible:bg-link/10"
+          className="inline-flex items-center mt-2 px-2 py-1.5 text-link text-sm font-medium rounded-lg transition-colors duration-200 hover:bg-link/10 focus-visible:bg-link/10"
         >
           View more on GitHub
           <ChevronRightIcon className="inline w-3.5 h-3.5 ml-1" strokeWidth={2} />
@@ -78,7 +78,7 @@ const Page = () => {
           'React.js',
           'User Interface Design',
         ].map((skill) => (
-          <div key={skill} className="px-2.5 py-1.5 rounded-lg text-sm font-medium border border-neutral-800 mr-2 mb-2">
+          <div key={skill} className="px-2.5 py-1.5 rounded-lg text-sm font-medium bg-neutral-500/10 text-neutral-300 mr-2 mb-2">
             {skill}
           </div>
         ))}

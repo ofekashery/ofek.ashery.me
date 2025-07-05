@@ -8,7 +8,7 @@
     "url": "git+https://github.com/ofekashery/ofek.ashery.me.git"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "export": "next export",
     "lint": "next lint",
     "build": "next build",
@@ -16,19 +16,22 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
-    "next": "^14.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "next": "15.3.5",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20.8.10",
-    "@types/react": "^18.2.34",
-    "autoprefixer": "^10.4.16",
+    "@types/react": "19.1.8",
     "eslint": "^8.52.0",
-    "eslint-config-next": "^14.0.1",
+    "eslint-config-next": "15.3.5",
     "eslint-config-prettier": "^9.0.0",
     "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
+    "tailwindcss": "^4.1.11",
     "typescript": "^4.9.5"
+  },
+  "overrides": {
+    "@types/react": "19.1.8"
   }
 }

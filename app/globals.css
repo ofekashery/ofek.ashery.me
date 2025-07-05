@@ -1,7 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-a {
-  @apply text-link;
+@theme {
+  --font-sans: var(--font-inter);
+  --color-background: #101010;
+  --color-link: #2997ff;
 }
