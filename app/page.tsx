@@ -1,6 +1,6 @@
 import Project from '@/components/project';
 import SocialLink from '@/components/social-link';
-import ChevronRightIcon from '@heroicons/react/24/outline/ChevronRightIcon';
+import { ChevronRightIcon } from 'lucide-react';
 
 const Page = () => {
   return (
@@ -26,17 +26,17 @@ const Page = () => {
         </p>
       </div>
 
-      <div className="mt-4">
+      <div className="flex gap-2 mt-4">
         <SocialLink name="GitHub" href="https://github.com/ofekashery" />
-        <span className="mx-2 text-neutral-600">/</span>
+        <span className="text-neutral-600">/</span>
         <SocialLink name="LinkedIn" href="https://www.linkedin.com/in/ofekashery" />
-        <span className="mx-2 text-neutral-600">/</span>
+        <span className="text-neutral-600">/</span>
         <SocialLink name="Email" href="mailto:ofek.ashery@gmail.com" />
       </div>
 
       <h2 className="text-base font-semibold mt-12 mb-4">Some projects that I’ve built</h2>
       <div>
-        <Project title="FIRST" logo="/assets/projects/firstisrael.jpg" link="https://firstisrael.org.il">
+        <Project title="FIRST" logo="/assets/projects/firstisrael.svg" link="https://firstisrael.org.il">
           This is where I work and spent the last few years.
         </Project>
         <Project title="Geist" logo="/assets/projects/geist.jpg" link="https://github.com/geist-org/react">
@@ -51,7 +51,7 @@ const Page = () => {
         </Project>
         <Project
           title="vertical-stack-in-card"
-          logo="/assets/projects/homeassistant.jpg"
+          logo="/assets/projects/homeassistant.svg"
           link="https://github.com/ofekashery/vertical-stack-in-card"
         >
           A sleek and modern custom card for Home Assistant.
@@ -60,10 +60,10 @@ const Page = () => {
           href="https://github.com/ofekashery"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center mt-2 px-2 py-1.5 text-link text-sm font-medium rounded-lg transition-colors duration-200 hover:bg-link/10 focus-visible:bg-link/10"
+          className="inline-flex items-center gap-1 mt-2 px-2 py-1.5 text-link text-sm font-medium rounded-lg transition-colors duration-200 hover:bg-link/10 focus-visible:bg-link/10"
         >
           View more on GitHub
-          <ChevronRightIcon className="inline w-3.5 h-3.5 ml-1" strokeWidth={2} />
+          <ChevronRightIcon className="size-4" />
         </a>
       </div>
 
@@ -78,7 +78,10 @@ const Page = () => {
           'React.js',
           'User Interface Design',
         ].map((skill) => (
-          <div key={skill} className="px-2.5 py-1.5 rounded-lg text-sm font-medium bg-neutral-500/10 text-neutral-300 mr-2 mb-2">
+          <div
+            key={skill}
+            className="px-2.5 py-1.5 rounded-lg text-sm font-medium bg-neutral-500/10 text-neutral-300 mr-2 mb-2"
+          >
             {skill}
           </div>
         ))}

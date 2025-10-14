@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ArrowUpRightIcon from '@heroicons/react/24/outline/ArrowUpRightIcon';
+import { ArrowUpRightIcon } from 'lucide-react';
 
 interface ProjectProps {
   title: string;
@@ -12,15 +12,13 @@ const Project: React.FC<ProjectProps> = ({ title, link, logo, children }) => {
   return (
     <>
       <a className="group flex items-center gap-4 text-current" href={link} target="_blank" rel="noopener noreferrer">
-        <Image className="rounded-lg" src={logo} alt={`${title} Logo`} width={28} height={28} />
+        <div className="flex size-10 flex-none items-center justify-center rounded-full border border-zinc-700/50 bg-zinc-800">
+          <Image className="size-7 rounded-full" src={logo} alt={`${title} Logo`} width={28} height={28} />
+        </div>
         <div className="flex-1 py-3 border-b border-neutral-800/80">
           <span className="inline-flex text-sm font-medium items-center rounded-md group-hover:bg-neutral-800 group-hover:px-1.5 group-hover:-mx-1.5 group-hover:py-0.5 group-hover:-my-0.5">
             {title}
-            <ArrowUpRightIcon
-              className="opacity-0 w-3 h-3 ml-0.5 transition-all duration-500 group-hover:opacity-100 group-hover:ml-1"
-              strokeWidth={2}
-              focusable="false"
-            />
+            <ArrowUpRightIcon className="opacity-0 size-4 ml-0.5 transition-all duration-500 group-hover:opacity-100 group-hover:ml-1" />
           </span>
           <p className="text-sm text-neutral-400">{children}</p>
         </div>
