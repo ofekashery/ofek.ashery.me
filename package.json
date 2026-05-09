@@ -10,26 +10,22 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "export": "next export",
-    "lint": "next lint",
     "build": "next build --turbopack",
     "start": "next start"
   },
   "dependencies": {
-    "lucide-react": "^0.545.0",
-    "next": "^16.1.5",
+    "lucide-react": "^1.14.0",
+    "next": "^16.2.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.14",
-    "@types/node": "^20.8.10",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "^22",
     "@types/react": "^19.2.0",
-    "eslint": "^9.37.0",
-    "eslint-config-next": "^15.5.5",
-    "eslint-config-prettier": "^10.1.8",
-    "postcss": "^8.5.10",
-    "tailwindcss": "^4.1.14",
-    "typescript": "^5.9.3"
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3"
   },
   "overrides": {
     "@types/react": "^19.2.0"

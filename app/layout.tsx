@@ -1,10 +1,14 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Newsreader } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+});
+const newsreader = Newsreader({
+  variable: '--font-newsreader',
+  subsets: ['latin'],
 });
 
 export const viewport: Viewport = {
@@ -35,7 +39,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
       <body className="bg-background text-sm text-white antialiased">{children}</body>
     </html>
   );

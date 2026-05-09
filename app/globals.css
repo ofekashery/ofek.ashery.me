@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
-@theme {
+@theme inline {
   --font-sans: var(--font-inter);
+  --font-serif: var(--font-newsreader);
   --color-background: #101010;
-  --color-link: #2997ff;
 }

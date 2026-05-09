@@ -34,7 +34,9 @@ const Page = () => {
         <SocialLink name="Email" href="mailto:ofek.ashery@gmail.com" />
       </div>
 
-      <h2 className="text-base font-semibold mt-12 mb-4">Some projects that I’ve built</h2>
+      <div className="border-b border-neutral-800/60 my-8" />
+
+      <h2 className="text-lg font-serif font-medium italic tracking-tight mb-4">Projects</h2>
       <div>
         <Project title="FIRST" logo="/assets/projects/firstisrael.svg" link="https://firstisrael.org.il">
           This is where I work and spent the last few years.
@@ -60,14 +62,16 @@ const Page = () => {
           href="https://github.com/ofekashery"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 mt-2 px-2 py-1.5 text-link text-sm font-medium rounded-lg transition-colors duration-200 hover:bg-link/10 focus-visible:bg-link/10"
+          className="inline-flex items-center gap-1 mt-2 -ml-2.5 px-2.5 py-1.5 text-sky-500 text-sm font-medium rounded-lg transition-colors duration-200 hover:bg-sky-700/10"
         >
           View more on GitHub
           <ChevronRightIcon className="size-4" />
         </a>
       </div>
 
-      <h2 className="text-base font-semibold mt-12 mb-4">Skills</h2>
+      <div className="border-b border-neutral-800/60 my-8" />
+
+      <h2 className="text-lg font-serif font-medium italic tracking-tight mb-4">Skills</h2>
       <div className="flex flex-wrap">
         {[
           'System Architecture',
