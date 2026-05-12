@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import { Inter, Newsreader } from 'next/font/google';
 import './globals.css';
 
@@ -40,7 +41,10 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
-      <body className="bg-background text-sm text-white antialiased">{children}</body>
+      <body className="bg-background text-sm text-white antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 };
