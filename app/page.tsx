@@ -4,7 +4,7 @@ import { ChevronRightIcon } from 'lucide-react';
 
 const Page = () => {
   return (
-    <div className="max-w-xl	mx-auto pt-16 md:pt-32 px-8 pb-12">
+    <div className="max-w-xl mx-auto pt-16 md:pt-32 px-8 pb-12">
       <h1 className="text-3xl font-semibold mb-8 tracking-tight">Ofek Ashery</h1>
       <div className="text-sm text-neutral-400 leading-6">
         <p>
@@ -38,24 +38,16 @@ const Page = () => {
 
       <h2 className="text-lg font-serif font-medium italic tracking-tight mb-4">Projects</h2>
       <div>
-        <Project title="FIRST" logo="/assets/projects/firstisrael.svg" link="https://firstisrael.org.il">
+        <Project title="FIRST" href="https://firstisrael.org.il">
           This is where I work and spent the last few years.
         </Project>
-        <Project title="Geist" logo="/assets/projects/geist.jpg" link="https://github.com/geist-org/react">
+        <Project title="Geist" href="https://github.com/geist-org/react">
           Design system for building modern websites and applications.
         </Project>
-        <Project
-          title="The Orange Alliance"
-          logo="/assets/projects/theorangealliance.jpg"
-          link="https://github.com/the-orange-alliance"
-        >
+        <Project title="The Orange Alliance" href="https://github.com/the-orange-alliance">
           A project for accessing the <em>FIRST</em> Tech Challenge event results.
         </Project>
-        <Project
-          title="vertical-stack-in-card"
-          logo="/assets/projects/homeassistant.svg"
-          link="https://github.com/ofekashery/vertical-stack-in-card"
-        >
+        <Project title="vertical-stack-in-card" href="https://github.com/ofekashery/vertical-stack-in-card">
           A sleek and modern custom card for Home Assistant.
         </Project>
         <a

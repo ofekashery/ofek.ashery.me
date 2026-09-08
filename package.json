@@ -9,7 +9,6 @@
   },
   "scripts": {
     "dev": "next dev --turbopack",
-    "export": "next export",
     "build": "next build --turbopack",
     "start": "next start"
   },
@@ -29,7 +28,7 @@
     "eslint-config-prettier": "^10.1.8",
     "postcss": "^8.5.14",
     "tailwindcss": "^4.3.0",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   },
   "overrides": {
     "@types/react": "^19.2.0"

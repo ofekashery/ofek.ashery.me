@@ -3,12 +3,11 @@ import { ArrowUpRightIcon } from 'lucide-react';
 
 interface ProjectProps {
   title: string;
-  link: string;
-  logo: string;
+  href: string;
   children: React.ReactNode;
 }
 
-const Project: React.FC<ProjectProps> = ({ title, link, logo, children }) => {
+const Project: React.FC<ProjectProps> = ({ title, href: link, children }) => {
   return (
     <a
       className="group flex flex-col items-start py-2 text-current"
